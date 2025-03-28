@@ -1,0 +1,126 @@
+.
+
+<!DOCTYPE html>
+<html lang="es">
+<button id="scrollDownBtn">.....</button>
+<p></p>
+
+ <style>
+        .nav-btn {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #f68b2c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 50px;
+        }
+        #prevBtn { left: 10px; }
+        #nextBtn { right: 10px; }
+
+
+        .section {
+            display: none;
+        }
+
+        .section:first-child {
+            display: block;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Vida en Música, Arte y Pasión</title>
+    
+    <link href="styles.css.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="prevBtn" class="nav-btn">&#9665;</button>
+    <button id="nextBtn" class="nav-btn">&#9655;</button>
+    
+    <div id="octagon-container">
+        <div class="octagon" id="octagon">
+            <div class="section" id="section-1">
+               
+               
+                <div style="display: flex; align-items: center;">
+                
+                    <img src="Imagenes/yo.jpg" alt="Imagen de inicio" class="inicio-img">
+                    <div>
+                    <h2>Mi Vida en Música, Arte y Pasión</h2> 
+                        <p>👋</p>
+                        <p><strong>Bienvenido/a a mi sitio web</strong></p> 
+                        <p>🖥️</p>
+                        <p><strong>Yo soy Luisa😄</strong></p>
+                    </div>
+                </div>
+                <p>🌟🎨En este espacio comparto conmigo misma y con el mundo mi pasión por el arte, el deporte y la vida.🥊⚽      
+                A través de mis creaciones, viajes y experiencias, te invito a conocer un poco más de mí.🧐🐱️</p>
+            
+            </div>
+            <div class="section" id="section-2">
+                 
+                <a href="Paginas web/sobremi.html">Sobre Mi📖</a>
+            </div>
+            <div class="section" id="section-3">
+                <a href="Paginas web/Muay.html">Muay Thai🥊</a>
+            </div>
+            <div class="section" id="section-4">
+              <a href="Paginas web/musica.html">Música🎵</a>
+            </div>
+            <div class="section" id="section-5">
+              
+                 <h3>Información de contacto📞</h3>
+                
+                <p>0961419186</p>
+                <p>mangleandino@gmail.com</p>
+              
+            </div>
+            <div class="section" id="section-6">
+                <a href="Paginas web/Dibujos.html">Dibujos🎨</a>
+            </div>
+            <div class="section" id="section-7">
+                <a href="Paginas web/Viajes.html">Viajes✈️</a>
+            </div>
+            <div class="section" id="section-8">
+                <a href="Paginas web/Umi.html">Umi🐱</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    
+  
+
+      <script>
+    let sections = document.querySelectorAll('.section');
+    let currentIndex = 0;
+    const totalSections = sections.length;
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        currentIndex++;
+        updateRotation();
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        currentIndex--;
+        updateRotation();
+    });
+
+    function updateRotation() {
+        let angle = (-360 / totalSections) * currentIndex;
+        document.getElementById('octagon').style.transform = `rotateY(${angle}deg)`;
+    }
+</script>
+
+
+    
+
+    
+</body>
+</html>

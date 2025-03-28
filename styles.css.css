@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start;
+    height: 100vh;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+#octagon-container {
+    width: 80vmin;
+    height: 80vmin;
+    perspective: 1500px;
+
+}
+
+.octagon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 1s;
+}
+
+.section {
+	font-family: 'Pacifico', cursive;
+    color: #f68b2c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#9EE4CE;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.5s, box-shadow 0.3s;
+    border: 8px solid #ffe4b5;
+    background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
+    background-size: cover;
+	
+	
+}
+
+.section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.section a {
+    color: #f68b2c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+    background-color:#FFF; /* Fondo gris */
+    padding: 10px 15px; /* Espaciado interno para que el fondo sea visible */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.section a:hover {
+    color: #ff4500;
+}
+
+#section-1 {
+	
+	
+    transform: rotateY(0deg) translateZ(780px);
+	
+    background-image: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+}
+
+#section-1 h2 {
+    margin-top: 100px; /* Aumenta el margen superior para bajarlo */
+    font-size: 2.5em;
+    color: #f68b2c;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative; /* Mantiene su posición dentro del flujo */
+    z-index: 10; /* Evita que otros elementos lo cubran */
+    padding: 10px; /* Espacio interno para mejor visibilidad */
+    border-radius: 10px; /* Bordes redondeados para mejor estética */
+    display: inline-block; /* Permite aplicar padding correctamente */
+}
+
+
+
+#section-1 .inicio-img {
+    width: 25%;
+    margin: 10px 20px 10px 0;
+    border-radius: 50%;
+    border: 3px solid #FFB871;
+    float: left;
+}
+
+#section-1 p {
+	
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    color: #f68b2c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    background: #9BF0D5;
+    text-align: left;
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: #FF8000;
+    padding: 10px 15px; /* Agrega un poco de padding para que el borde se vea bien */
+    border-radius: 15px; /* Redondea los bordes */
+    display: inline-block; /* Para que se ajuste al tamaño del texto */
+}
+
+
+#section-2 {
+    transform: rotateY(45deg) translateZ(780px);
+}
+#section-3 {
+    transform: rotateY(90deg) translateZ(780px);
+}
+#section-4 {
+    transform: rotateY(135deg) translateZ(780px);
+}
+#section-5 {
+    transform: rotateY(180deg) translateZ(780px);
+}
+#section-6 {
+    transform: rotateY(225deg) translateZ(780px);
+}
+#section-7 {
+    transform: rotateY(270deg) translateZ(780px);
+}
+#section-8 {
+    transform: rotateY(315deg) translateZ(780px);
+}
+
+body {
+    user-select: none; /* Bloquea la selección de texto */
+    pointer-events: none; /* Deshabilita clics en todo el cuerpo */
+}
+
+/* Permitir interacción solo en botones y enlaces */
+button, a {
+    pointer-events: auto;
+}
+
