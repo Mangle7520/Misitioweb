@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música</title>
+    <style>
+	.back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ffb347;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+			}
+        body {
+            font-family: 'Pacifico', cursive;
+            color: #ff7f27;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            background: #a8d8c9;
+            background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            text-align: center;
+            padding: 1em;
+             background-color: #ff9966;
+            color: white;
+            margin-bottom: 1em;
+        }
+        .seccion {
+            text-align: center;
+            margin: 2em;
+        }
+        .videos {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        iframe {
+            width: 45%;
+            max-width: 500px;
+            height: 300px;
+            border-radius: 8px;
+        }
+        .lista {
+            text-align:left;
+            margin: 2em;
+        }
+		.imagenes {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .imagenes img {
+            width: 30%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<a href="../Index.html" class="back-button">Regresar</a>
+    <header>
+        <h1>Mùsica</h1>
+    </header>
+    
+    <section class="seccion">
+        <h2>Sound in the Park</h2>
+        <p>Sound in the Park fue una banda llena de elegria y creatividad, con un estilo único que combinaba diversos géneros musicales.</p>
+        <div class="videos">
+            <iframe src="../Videos/b1.mp4" allowfullscreen></iframe>
+            <iframe src="../Videos/b2.mp4" allowfullscreen></iframe>
+            <iframe src="../Videos/b3.mp4" allowfullscreen></iframe>
+            
+        </div>
+        
+    </section>
+    <div class="imagenes">
+            <img src="../Imagenes/b1.jpg" alt="París 1">
+            <img src="../Imagenes/b2.jpg" alt="París 1">
+            <img src="../Imagenes/b3.jpg" alt="París 1">
+            </div>
+
+    <section class="seccion">
+        <h2>Mi Interpretación en Guitarra</h2>
+        <iframe src="../Videos/g1.mp4" allowfullscreen></iframe>
+    </section>
+    
+    <section class="lista">
+        <h2>Mis 10 Canciones Favoritas</h2>
+        <ol>
+            <li>Wait and bleed- Slipknot</li>
+            <li>1537- Guardarraya</li>
+            <li>Girasol- Nasa Histoires</li>
+            <li>From the Start- Laufey</li>
+            <li>Ivy- Flix Pussy Cola</li>
+            <li>Doma- Josean Log</li>
+            <li>Tronco- 3vol</li>
+            <li>Chop Suey- SOAD</li>
+            <li>Christmas Kids- Roar</li>
+            <li>Copacabana- Barry Manilow</li>
+        </ol>
+    </section>
+    
+    <footer>
+        <p>La música es el lenguaje del alma.</p>
+    </footer>
+</body>
+</html>

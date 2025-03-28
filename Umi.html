@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umi</title>
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            color: #ff7f27;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            background: #a8d8c9;
+            background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+            margin: 0;
+            padding: 0;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ffb347;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        header, footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #ff9966;
+            color: white;
+            margin-bottom: 1em;
+        }
+        .descripcion {
+            text-align: center;
+            margin: 1em 0;
+        }
+        .tabla-info {
+            margin: 0 auto 2em;
+            border-collapse: collapse;
+            width: 50%;
+            text-align: left;
+        }
+        .tabla-info th, .tabla-info td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .tabla-info th {
+            background-color: #ff9966;
+            color: white;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+         .videos {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .videos video {
+            width: 45%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 80%;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+ <a href="../Index.html" class="back-button">Regresar</a>
+    <header>
+        <h1>Umi</h1>
+    </header>
+
+    <section class="descripcion">
+        <p>Umi es mi mejor amiga y compañera de vida. Es un gato muy especial y lleno de amor.</p>
+    </section>
+
+    <section class="info">
+        <table class="tabla-info">
+            <tr>
+                <th>Nombre</th>
+                <td>Umi</td>
+            </tr>
+            <tr>
+                <th>Edad</th>
+                <td>3 años</td>
+            </tr>
+            <tr>
+                <th>Raza</th>
+                <td>Calico</td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>Tricolor, naranja, blanco, negro</td>
+            </tr>
+            <tr>
+                <th>Sexo</th>
+                <td>Hembra</td>
+            </tr>
+        </table>
+    </section>
+    <div class="container">
+            <header>Galeria</header>
+            <div class="gallery">
+           
+                <img src="../Imagenes/umi/1.jpeg" alt="Dibujo  1">
+                <img src="../Imagenes/umi/2.jpg" alt="Dibujo  2">
+                <img src="../Imagenes/umi/3.jpg" alt="Dibujo  3">
+                <img src="../Imagenes/umi/4.jpg" alt="Dibujo  4">
+                <img src="../Imagenes/umi/5.jpg" alt="Dibujo  5">
+                <img src="../Imagenes/umi/6.jpg" alt="Dibujo  6">
+                <img src="../Imagenes/umi/7.jpg" alt="Dibujo  7">
+                <img src="../Imagenes/umi/8.jpg" alt="Dibujo  8">
+             
+                <img src="../Imagenes/umi/10.jpg" alt="Dibujo  10">
+                <img src="../Imagenes/umi/11.jpg" alt="Dibujo  11">
+               
+                <img src="../Imagenes/umi/13.jpg" alt="Dibujo  13">
+                <img src="../Imagenes/umi/14.jpg" alt="Dibujo  14">
+                <img src="../Imagenes/umi/15.jpg" alt="Dibujo  15">
+                <img src="../Imagenes/umi/16.jpg" alt="Dibujo  16">
+                <img src="../Imagenes/umi/17.jpg" alt="Dibujo  17">
+                <img src="../Imagenes/umi/18.jpg" alt="Dibujo  18">
+                <img src="../Imagenes/umi/19.jpg" alt="Dibujo  19">
+                <img src="../Imagenes/umi/20.jpg" alt="Dibujo  20">
+        </div>
+        </div>
+    </div>
+
+     <div class="modal" id="modal">
+        <button class="close-button" id="closeButton">X</button>
+        <img id="modalImage" src="" alt="Imagen ampliada">
+    </div>
+    
+      <header>Videos</header>
+   
+     
+  
+
+    <section class="videos">
+        <!-- Galería de videos 2 x 2 -->
+        <video src="../Videos/u1.mp4" controls></video>
+        <video src="../Videos/u3.mp4" controls></video>
+        <video src="../Videos/u2.mp4" controls></video>
+        <video src="../Videos/u4.mp4" controls></video>
+    </section>
+    
+
+    <footer>
+        <p>La mejor compañia</p>
+    </footer>
+    
+        <script>
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        const closeButton = document.getElementById('closeButton');
+
+        galleryImages.forEach(image => {
+            image.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImage.src = image.src;
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+    
+</body>
+</div>
+</div>
+</div>
+</div>
+</div>
+</html>

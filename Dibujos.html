@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujos</title>
+    <style>
+	.back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ffb347;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+			}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:#9EE4CE;
+			background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
+        }
+        header {
+             background-color: #ff9966;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+        .section {
+            width: 100%;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .section h2 {
+            margin-bottom: 1rem;
+            color: #333;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: orange;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 80%;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<a href="../Index.html" class="back-button">Regresar</a>
+    <header>
+        <h1>Dibujos: Tradicionales, Digital y Graffiti</h1>
+    </header>
+
+    <div class="container">
+        <!-- Dibujos Tradicionales -->
+        <div class="section" id="tradicionales">
+            <header>Tradicionales</header>
+            <div class="gallery">
+                <!-- 20 imágenes de ejemplo -->
+                <!-- Cambiar "placeholder.jpg" por las rutas reales de las imágenes -->
+                <img src="../Imagenes/Dibujos/dt1.jpg" alt="Dibujo Tradicional 1">
+                <img src="../Imagenes/Dibujos/dt2.jpg" alt="Dibujo Tradicional 2">
+                <img src="../Imagenes/Dibujos/dt3.jpg" alt="Dibujo Tradicional 3">
+                <img src="../Imagenes/Dibujos/dt4.jpg" alt="Dibujo Tradicional 4">
+                <img src="../Imagenes/Dibujos/dt5.jpg" alt="Dibujo Tradicional 5">
+                <img src="../Imagenes/Dibujos/dt6.jpg" alt="Dibujo Tradicional 6">
+                <img src="../Imagenes/Dibujos/dt7.jpg" alt="Dibujo Tradicional 7">
+                <img src="../Imagenes/Dibujos/dt8.jpg" alt="Dibujo Tradicional 8">
+                <img src="../Imagenes/Dibujos/dt9.jpg" alt="Dibujo Tradicional 9">
+                <img src="../Imagenes/Dibujos/dt10.jpg" alt="Dibujo Tradicional 10">
+                <img src="../Imagenes/Dibujos/dt11.jpg" alt="Dibujo Tradicional 11">
+                <img src="../Imagenes/Dibujos/dt12.jpg" alt="Dibujo Tradicional 12">
+                <img src="../Imagenes/Dibujos/dt13.jpg" alt="Dibujo Tradicional 13">
+                <img src="../Imagenes/Dibujos/dt14.jpg" alt="Dibujo Tradicional 14">
+                <img src="../Imagenes/Dibujos/dt15.jpg" alt="Dibujo Tradicional 15">
+                <img src="../Imagenes/Dibujos/dt16.jpg" alt="Dibujo Tradicional 16">
+                <img src="../Imagenes/Dibujos/dt17.jpg" alt="Dibujo Tradicional 17">
+                <img src="../Imagenes/Dibujos/dt18.jpg" alt="Dibujo Tradicional 18">
+                <img src="../Imagenes/Dibujos/dt19.jpg" alt="Dibujo Tradicional 19">
+                <img src="../Imagenes/Dibujos/dt20.jpg" alt="Dibujo Tradicional 20">
+            </div>
+        </div>
+
+        <!-- Dibujos Digitales -->
+        <div class="section" id="digitales">
+            <header>Digitales</header>
+            <div class="gallery">
+                <img src="../Imagenes/Dibujos/dd1.jpg" alt="Dibujo Digital 1">
+                <img src="../Imagenes/Dibujos/dd2.jpg" alt="Dibujo Digital 2">
+                <img src="../Imagenes/Dibujos/dd3.jpg" alt="Dibujo Digital 3">
+                <img src="../Imagenes/Dibujos/dd4.png" alt="Dibujo Digital 4">
+            </div>
+        </div>
+
+        <!-- Graffiti -->
+        <div class="section" id="graffiti">
+            <header>Graffiti</header>
+            <div class="gallery">
+                <img src="../Imagenes/Dibujos/dg1.jpg" alt="Graffiti 1">
+                <img src="../Imagenes/Dibujos/dg2.jpg" alt="Graffiti 2">
+                <img src="../Imagenes/Dibujos/dg3.jpg" alt="Graffiti 3">
+                <img src="../Imagenes/Dibujos/dg4.jpg" alt="Graffiti 4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para la imagen ampliada -->
+    <div class="modal" id="modal">
+        <button class="close-button" id="closeButton">Cerrar</button>
+        <img id="modalImage" src="" alt="Imagen Ampliada">
+    </div>
+
+    <script>
+        // Seleccionar elementos
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        const closeButton = document.getElementById('closeButton');
+
+        // Mostrar la imagen en grande
+        galleryImages.forEach(image => {
+            image.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImage.src = image.src;
+            });
+        });
+
+        // Cerrar el modal
+        closeButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Cerrar modal al hacer clic fuera de la imagen
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
